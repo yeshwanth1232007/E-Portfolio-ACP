@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Yeshwanth S — B.Tech CSIT student at REVA University. Showcase of projects including the 2D C Graphics Editor.">
+    <title>Yeshwanth S | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    
+    <!-- Background Canvas Particles -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="navbar" id="navbar">
+            <div class="nav-logo" id="navLogo">
+                <span class="logo-bracket">&lt;</span>YS<span class="logo-bracket"> /&gt;</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active" id="link-home">Home</a></li>
+                <li><a href="#about" class="nav-link" id="link-about">About</a></li>
+                <li><a href="#skills" class="nav-link" id="link-skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" id="link-projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" id="link-contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="welcome-badge">Welcome to my space</span>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Yeshwanth S</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    CSIT Student at <span class="accent-text">REVA University</span>
+                </h2>
+                <p class="hero-description">
+                    Currently in my 2nd semester (Section C) pursuing a B.Tech in Computer Science & Information Technology. I build software applications, explore algorithms, and design interactive console and web experiences.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary" id="btn-view-work">
+                        <span>View Projects</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary" id="btn-contact-me">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrows">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <p class="section-subtitle">A glimpse into my academic and coding journey</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card glass-card animate-card">
+                    <h3>Academic Profile</h3>
+                    <p>I am pursuing my engineering degree at REVA University, specializing in Computer Science & Information Technology (CSIT). Currently in Section C, 2nd Semester, I am deepening my understanding of core computer science concepts, programming systems, and software design fundamentals.</p>
+                </div>
+                <div class="about-card glass-card animate-card">
+                    <h3>Developer Aims</h3>
+                    <p>My academic work and projects focus on bridging software algorithms with user-friendly front-ends. I have extensive practice in building console applications in C, logic implementation, structures, math libraries, and procedural structures, and am expanding into modern full-stack web applications.</p>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/about&gt;</span>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                <p class="section-subtitle">Core technical competencies and tools</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card glass-card" data-skill="C" id="skill-c">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="24" r="22" fill="none" stroke="url(#gradC)" stroke-width="2"/><text x="24" y="30" text-anchor="middle" fill="url(#gradC)" font-size="18" font-weight="700">C</text><defs><linearGradient id="gradC" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#8b5cf6"/><stop offset="100%" stop-color="#ec4899"/></linearGradient></defs></svg>
+                    </div>
+                    <h4>C Programming</h4>
+                    <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                    <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-card glass-card" data-skill="DataStructures" id="skill-ds">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="24" r="22" fill="none" stroke="url(#gradDS)" stroke-width="2"/><text x="24" y="30" text-anchor="middle" fill="url(#gradDS)" font-size="16" font-weight="700">DS</text><defs><linearGradient id="gradDS" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#06b6d4"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient></defs></svg>
+                    </div>
+                    <h4>Data Structures</h4>
+                    <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                    <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-card glass-card" data-skill="Python" id="skill-python">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="24" r="22" fill="none" stroke="url(#gradPy)" stroke-width="2"/><text x="24" y="30" text-anchor="middle" fill="url(#gradPy)" font-size="16" font-weight="700">Py</text><defs><linearGradient id="gradPy" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#eab308"/></linearGradient></defs></svg>
+                    </div>
+                    <h4>Python</h4>
+                    <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                    <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-card glass-card" data-skill="HTML_CSS" id="skill-htmlcss">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="24" r="22" fill="none" stroke="url(#gradWeb)" stroke-width="2"/><text x="24" y="28" text-anchor="middle" fill="url(#gradWeb)" font-size="11" font-weight="700">HTML</text><defs><linearGradient id="gradWeb" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#14b8a6"/></linearGradient></defs></svg>
+                    </div>
+                    <h4>HTML & CSS</h4>
+                    <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                    <span class="skill-level">Advanced</span>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/skills&gt;</span>
+        </div>
+    </section>
+
+    <!-- Projects Section with Interactive Simulator -->
+    <section class="section projects" id="projects">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">Academic <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">2D Graphics Console Editor (ACP Mini Project)</p>
+            </div>
+            <div class="project-showcase glass-card">
+                <div class="project-info">
+                    <div class="badge">ACP Mini Project</div>
+                    <h3>2D Graphics Console Editor in C</h3>
+                    <p>
+                        A command-driven computer graphics software console developed in C. It employs memory-managed character matrices to simulate a raster canvas and uses fundamental graphics drawing algorithms to render pixels on a text screen.
+                    </p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <strong>DDA Algorithm:</strong> Renders lines using incremental steps and float rounding.
+                        </div>
+                        <div class="highlight-item">
+                            <strong>Midpoint Algorithm:</strong> Renders circles efficiently using 8-way symmetry.
+                        </div>
+                        <div class="highlight-item">
+                            <strong>Interactive Canvas:</strong> Holds a 25x80 char array rendering empty ('_') and plotted ('*') cells.
+                        </div>
+                    </div>
+                    <div class="project-tech-tags">
+                        <span>C Language</span>
+                        <span>Graphics Algorithms</span>
+                        <span>Matrix Simulation</span>
+                        <span>Academic Design</span>
+                    </div>
+                </div>
+
+                <!-- Live Simulator Component -->
+                <div class="project-simulator glass-card">
+                    <div class="simulator-header">
+                        <span class="dot-red"></span>
+                        <span class="dot-yellow"></span>
+                        <span class="dot-green"></span>
+                        <span class="simulator-title">Console Simulator (minifinal.c)</span>
+                    </div>
+                    <div class="simulator-body">
+                        <div class="terminal-menu">
+                            <button class="sim-btn" id="sim-line">1. Add Line</button>
+                            <button class="sim-btn" id="sim-rect">2. Add Rect</button>
+                            <button class="sim-btn" id="sim-tri">3. Add Triangle</button>
+                            <button class="sim-btn" id="sim-circle">4. Add Circle</button>
+                            <button class="sim-btn btn-danger" id="sim-delete">5. Delete Area</button>
+                            <button class="sim-btn btn-warning" id="sim-clear">6. Clear Grid</button>
+                            <button class="sim-btn btn-primary" id="sim-modify">7. Modify Object</button>
+                            <button class="sim-btn btn-info" id="sim-display">8. Display Grid</button>
+                        </div>
+                        <div class="terminal-params" id="param-box">
+                            <span id="param-label">Click an operation above to execute it on the grid!</span>
+                            <div class="param-inputs" id="param-inputs-container"></div>
+                        </div>
+                        <pre class="terminal-display" id="sim-display">Loading drawing grid...</pre>
+                    </div>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/projects&gt;</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+                <p class="section-subtitle">Let's connect and collaborate</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info glass-card">
+                    <h3>Let's talk</h3>
+                    <p>Have questions about the C program, or want to discuss university studies and software development topics? Drop a message!</p>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="icon">📍</span>
+                            <span>REVA University, Bangalore, India</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="icon">🎓</span>
+                            <span>B.Tech CSIT (Section C, 2nd Semester)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container glass-card">
+                    <form class="contact-form" id="contactForm" onsubmit="event.preventDefault(); alert('Message sent successfully! Thanks for reaching out.'); this.reset();">
+                        <div class="form-group">
+                            <input type="text" id="contactName" placeholder=" " required>
+                            <label for="contactName">Your Name</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="contactEmail" placeholder=" " required>
+                            <label for="contactEmail">Your Email</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="contactMessage" rows="4" placeholder=" " required></textarea>
+                            <label for="contactMessage">Your Message</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="btn-send-message">
+                            <span>Send Message</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/contact&gt;</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-bracket">&lt;</span>YS<span class="logo-bracket"> /&gt;</span>
+            </div>
+            <p>Crafted with 💜 by Yeshwanth S | REVA University</p>
+            <p class="footer-copy">&copy; 2026 All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

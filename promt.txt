@@ -1,0 +1,47 @@
+================================================================================
+PROJECT PROMPT: 2D GRAPHICS CONSOLE EDITOR IN C
+================================================================================
+
+Create a lightweight, interactive 2D graphics editor console application in C. The application will simulate a digital drawing canvas using a 2D character array and allow users to draw, delete, and modify shapes using basic geometry algorithms.
+
+--------------------------------------------------------------------------------
+1. CORE SPECIFICATIONS & CANVAS
+--------------------------------------------------------------------------------
+- Canvas Dimensions: 25 rows by 80 columns.
+- Representation: Use a 2D global char matrix: `char picture[25][80]`.
+- Background character: Initialize all canvas cells with an underscore character ('_').
+- Drawing character: Use the asterisk character ('*') to represent drawn coordinates.
+
+--------------------------------------------------------------------------------
+2. SHAPE IMPLEMENTATION & ALGORITHMS
+--------------------------------------------------------------------------------
+Your program must implement the E-Portfolio following drawing functions:
+- Point Drawing: Draw a single point at (x, y) if coordinates are within the grid bounds.
+- Line Drawing: Draw a straight line between (x1, y1) and (x2, y2) using the Digital Differential Analyzer (DDA) algorithm. Compare absolute differences in x and y coordinates to determine calculation steps.
+- Rectangle Drawing: Draw a rectangle specified by its top-left corner (x, y), width, and height. The perimeter must be drawn by executing four separate line drawing procedures.
+- Triangle Drawing: Draw a symmetric triangle based on a top vertex (x, y) and a vertical size parameter. Calculate and connect the three vertices using lines.
+- Circle Drawing: Draw a circle with a center (xc, yc) and radius (r) using the Midpoint Circle Drawing Algorithm (Bresenham's circle algorithm) utilizing 8-way symmetry.
+
+--------------------------------------------------------------------------------
+3. CANVAS MANAGEMENT
+--------------------------------------------------------------------------------
+- Initialize: A helper function to fill the canvas matrix with background characters.
+- Display: Print the current canvas contents to the standard output.
+- Delete Region: A function that clears all characters inside a specified rectangular region (x, y, width, height) by resetting them to '_'.
+- Modify Object: Re-initialize the entire canvas and redraw a new object of choice (Line, Rectangle, Triangle, or Circle) based on newly input parameters.
+
+--------------------------------------------------------------------------------
+4. INTERACTIVE MENU INTERFACE
+--------------------------------------------------------------------------------
+Provide a terminal-based, menu-driven interface inside the main function allowing users to choose operations in a loop:
+1. Add Line
+2. Add Rectangle
+3. Add Triangle
+4. Add Circle
+5. Delete Object (clears a rectangular area)
+6. Modify Object (clears canvas and draws one new shape)
+7. Display Picture (render the current canvas on screen)
+8. Exit
+
+Implement input validations to ensure the program does not crash on invalid menu choices or coordinate specifications.
+================================================================================
